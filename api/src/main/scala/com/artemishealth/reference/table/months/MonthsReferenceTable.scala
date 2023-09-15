@@ -1,6 +1,6 @@
-package com.artemishealth.reference.table
+package com.artemishealth.reference.table.months
 
-import org.apache.spark
+import dao.ReferenceTableProcessor
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 class MonthsReferenceTable(spark: SparkSession) extends ReferenceTableProcessor {

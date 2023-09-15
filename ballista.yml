@@ -1,0 +1,8 @@
+versioned_branch: master
+build_version: 0.0.1
+artifacts:
+  - name_key: reference-tables
+    dockerfile_stage: production-container
+    docker_image:
+      publication:
+        destination: DESTINATION_ECR
