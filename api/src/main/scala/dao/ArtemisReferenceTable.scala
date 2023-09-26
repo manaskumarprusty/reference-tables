@@ -1,11 +1,12 @@
 package dao
 
-sealed trait ArtemisReferenceTable {
-  val tableName: String
-}
+
 
 object ArtemisReferenceTable {
-  case object month extends ArtemisReferenceTable {
+  sealed trait ArtemisReferenceTable {
+    val tableName: String
+  }
+  case object Month extends ArtemisReferenceTable {
     override val tableName: String = "months"
   }
 

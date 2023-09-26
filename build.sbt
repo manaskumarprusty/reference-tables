@@ -6,9 +6,11 @@ scalafmtOnCompile := true
 
 lazy val global = project
   .in(file("."))
+  .dependsOn(api)
   .settings(ProjectSettings.settings)
+  .settings(libraryDependencies ++= commonDependencies)
   .disablePlugins(AssemblyPlugin)
-  .aggregate(api)
+
 
 lazy val api = project
   .settings(
